@@ -42,7 +42,7 @@ function App() {
           {todos.map((todo) => (
             <li key={todo.id} className="listing">
               <input type="checkbox" checked={todo.completed} />
-              {todo.title}
+             <label htmlFor="checktodo"> {todo.title}</label>
             </li>
           ))}
         </ul>
