@@ -4,7 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
-
+.listing input[type=checkbox]:checked+label {
+  color: gray;
+  font-style: normal;
+  text-decoration: line-through;
+}
 .listing {
   list-style: none;
   margin: 10px;
