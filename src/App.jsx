@@ -9,6 +9,18 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [page, setPage] = useState(1);
 
+    let [comp, setComp] = useState(null);
+
+  function todocomp() {
+    let num = 0;
+    todos.map((e) => {
+      if (e.completed == true) {
+        num += 1;
+      }
+    });
+    setComp(num);
+  }
+  useEffect(todocomp, todos.completed);
   const pageSize = 20;
 
   useEffect(() => {
@@ -52,6 +64,14 @@ function App() {
           </button>
           <p>Page {page}</p>
           <button onClick={handleNextClick}>Next</button>
+        </div>
+         <div className="completed">
+          <div className="status">
+            <p>Tast Status</p>
+          </div>
+
+          <p className="green">Completed {comp}</p>
+          <p className="red">Pending {20 - comp}</p>
         </div>
       </div>
     </>
