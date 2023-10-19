@@ -4,6 +4,36 @@
   padding: 2rem;
   text-align: center;
 }
+.completed {
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  border: 2px solid gray;
+  padding: 0 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.completed .red {
+  color: red;
+
+}
+
+.completed p {
+  margin: 0;
+}
+
+.completed .green {
+  color: green;
+
+}
+
+.completed .status {
+  width: 150px;
+  background-color: black;
+  color: white;
+}
 .listing input[type=checkbox]:checked+label {
   color: gray;
   font-style: normal;
